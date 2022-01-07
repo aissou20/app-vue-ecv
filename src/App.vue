@@ -1,32 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <nav class="navbar">
+      <span>
+        <img :src="imageSrc" alt="logo">
+      </span>
+      <ul>
+        <li  v-for="menu in menus" :key="menu.id">
+          {{ menu.title }}
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      titleContent: 'Hello le monde',
+      result: 0,
+      menus: [
+        {id: 1, title: 'Menu 1'},
+        {id: 2, title: 'Menu 2'},
+        {id: 3, title: 'Menu 3'}
+      ],
+      links: [
+        {id: 1, title: 'Lien 1'},
+        {id: 2, title: 'Lien 2'},
+        {id: 3, title: 'Lien 3'}
+      ],
+      imageSrc:'/assets/logo.png'
     }
-  }
+  },
 }
+</script>
+<style lang="scss">
+
 </style>
