@@ -1,40 +1,75 @@
 <template>
   <div id="app">
-    <nav class="navbar">
-      <span>
-        <img :src="imageSrc" alt="logo">
-      </span>
-      <ul>
-        <li  v-for="menu in menus" :key="menu.id">
-          {{ menu.title }}
-        </li>
-      </ul>
-    </nav>
+    <layout-header></layout-header>
+    <layout-content></layout-content>
+    <layout-footer></layout-footer>
   </div>
 </template>
 
 <script>
+import LayoutHeader from "./components/LayoutHeader";
+import LayoutFooter from "./components/LayoutFooter";
+import LayoutContent from "./components/LayoutContent";
+
 export default {
   name: 'App',
+  components: {
+    LayoutHeader,
+    LayoutContent,
+    LayoutFooter
+  },
   data() {
     return {
-      titleContent: 'Hello le monde',
       result: 0,
-      menus: [
-        {id: 1, title: 'Menu 1'},
-        {id: 2, title: 'Menu 2'},
-        {id: 3, title: 'Menu 3'}
-      ],
-      links: [
-        {id: 1, title: 'Lien 1'},
-        {id: 2, title: 'Lien 2'},
-        {id: 3, title: 'Lien 3'}
-      ],
-      imageSrc:'/assets/logo.png'
     }
   },
 }
 </script>
 <style lang="scss">
+#app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
+h1 {
+  color: blue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin: 1em;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-wrapper {
+  border: solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  border: solid red;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
 </style>
