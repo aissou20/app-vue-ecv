@@ -1,15 +1,10 @@
 <template>
-  <router-view/>
+<div class="posts"> </div>
 </template>
 
 <script>
 export default {
-  name: "LayoutContent",
-  data() {
-    return {
-
-    }
-  },
+  name: "Posts"
 }
 </script>
 

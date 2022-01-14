@@ -1,15 +1,12 @@
 <template>
-  <router-view/>
+<div class="album">
+  <h2>album</h2>
+</div>
 </template>
 
 <script>
 export default {
-  name: "LayoutContent",
-  data() {
-    return {
-
-    }
-  },
+  name: "UserAlbum"
 }
 </script>
 

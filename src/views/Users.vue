@@ -1,15 +1,12 @@
 <template>
-  <router-view/>
+  <div class="users">
+    <h1>utilisateurs</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "LayoutContent",
-  data() {
-    return {
-
-    }
-  },
+  name: "Users",
 }
 </script>
 

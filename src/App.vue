@@ -18,11 +18,6 @@ export default {
     LayoutContent,
     LayoutFooter
   },
-  data() {
-    return {
-      result: 0,
-    }
-  },
 }
 </script>
 <style lang="scss">
