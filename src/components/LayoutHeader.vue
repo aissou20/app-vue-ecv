@@ -7,7 +7,7 @@
       <div class="header_nav">
         <ul>
           <li v-for="menu in menus" :key="menu.id">
-            {{ menu.title }}
+            <router-link :to="{ name: menu.link }">{{ menu.title }}</router-link>
           </li>
         </ul>
       </div>
@@ -23,9 +23,11 @@ export default {
       titleContent: 'Hello le monde',
       result: 0,
       menus: [
-        {id: 1, title: 'Menu 1'},
-        {id: 2, title: 'Menu 2'},
-        {id: 3, title: 'Menu 3'}
+        {id: 1, title: 'Utilisateurs', link:'Users'},
+        {id: 2, title: 'Posts',link:'Posts'},
+        {id: 3, title: 'Photos',link:'Photos'},
+        {id: 4, title: 'Stepper',link:'Stepper'},
+        {id: 5, title: 'Administration',link:'Administration'}
       ],
     }
   },
@@ -34,5 +36,8 @@ export default {
 </script>
 
 <style scoped>
-
+img{
+  width: 20%;
+  height: 20%;
+}
 </style>
