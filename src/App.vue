@@ -1,15 +1,17 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <layout-header></layout-header>
     <layout-content></layout-content>
     <layout-footer></layout-footer>
-  </div>
+  </v-app>
+
 </template>
 
 <script>
+
 import LayoutHeader from "./components/LayoutHeader";
-import LayoutFooter from "./components/LayoutFooter";
 import LayoutContent from "./components/LayoutContent";
+import LayoutFooter from "./components/LayoutFooter";
 
 export default {
   name: 'App',
@@ -25,6 +27,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 h1 {

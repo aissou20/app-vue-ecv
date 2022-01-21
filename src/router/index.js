@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Photos from "../views/Photos";
 import Users from "../views/Users";
 import Posts from "../views/Posts";
+import Stepper from "../views/Stepper";
 
 Vue.use(VueRouter)
 
@@ -39,7 +40,7 @@ const routes = [
     }, {
         path: '/stepper',
         name: 'Stepper',
-        component: Home
+        component: Stepper
     }, {
         path: '/administration',
         name: 'Administration',

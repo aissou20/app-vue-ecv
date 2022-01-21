@@ -36,6 +36,9 @@ export default {
 </script>
 
 <style scoped>
+.header {
+  margin-bottom: 8em;
+}
 img{
   width: 20%;
   height: 20%;
