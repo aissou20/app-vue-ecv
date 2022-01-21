@@ -5,11 +5,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    email: '',
+    password: '',
+    address: '',
+    cgv: false,
   },
-  mutations: {
-  },
-  actions: {
-  },
+  // mutations: {
+  //   UPDATEEMAIL(state, payload){
+  //     state.email = payload;
+  //   }
+  // },
+  // actions: {
+  //   addEmail({context},payload){
+  //     context.commit('UPDATEEMAIL', payload)
+  //   }
+  // },
   modules: {
   }
 })
